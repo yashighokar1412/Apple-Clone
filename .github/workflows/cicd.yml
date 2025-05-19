@@ -30,7 +30,7 @@ jobs:
           
   Secutity-check:
     runs-on: ubuntu-latest
-      needs: Test-apache
+    needs: Test-apache
      steps:
         uses: actions/checkout@v4
       - name: Trivy Installation
