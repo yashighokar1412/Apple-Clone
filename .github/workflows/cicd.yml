@@ -44,4 +44,4 @@ jobs:
         run: trivy fs --format table -o fs-report.json .
         
       - name: Gitleaks Installation
-        run: gitleaks detect source . -r gitleaks-report.josn -f json
+        run: gitleaks detect source . -f gitleaks-report.josn -f json
