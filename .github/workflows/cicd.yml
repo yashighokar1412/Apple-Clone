@@ -31,8 +31,8 @@ jobs:
   Secutity-check:
     runs-on: ubuntu-latest
     needs: Test-apache
-     steps:
-        uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
       - name: Trivy Installation
         run: |
           sudo apt-get install wget apt-transport-https gnupg lsb-release -y
@@ -45,5 +45,3 @@ jobs:
         
       - name: Gitleaks Installation
         run: Gitleaks detect source . -r gitleaks-report.josn -f json
-
-
